@@ -1,0 +1,14 @@
+{
+  "name": "chronokeeppro",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "install-all": "cd server && npm install && cd ../chronokeep-frontened && npm install",
+    "dev": "concurrently \"npm run server\" \"npm run frontend\"",
+    "server": "cd server && npm run dev",
+    "frontend": "cd chronokeep-frontened && npm start"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}

@@ -1,0 +1,330 @@
+/* Reset and base styles */
+body, html, #root, .ck-root {
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+  background: linear-gradient(135deg, #e0eafc 0%, #cfdef3 100%);
+}
+
+/* Layout */
+.ck-root {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+/* Main card container */
+.ck-main-card {
+  display: flex;
+  background: #fff;
+  border-radius: 24px;
+  box-shadow: 0 8px 32px rgba(60, 60, 120, 0.13);
+  overflow: hidden;
+  min-width: 350px;
+  max-width: 900px;
+  width: 100%;
+  min-height: 540px;
+  margin: 2rem;
+}
+
+/* Sidebar */
+.ck-sidebar {
+  background: linear-gradient(135deg, #6a82fb 0%, #fc5c7d 100%);
+  color: #fff;
+  width: 220px;
+  min-width: 180px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2.5rem 1.5rem 2rem 1.5rem;
+  gap: 2rem;
+  box-shadow: 2px 0 12px rgba(60,60,120,0.07);
+}
+
+.ck-logo {
+  font-size: 2.2rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+  margin-bottom: 1rem;
+  text-shadow: 0 2px 8px rgba(100,100,180,0.08);
+}
+
+.ck-sidebar .ck-logout {
+  margin-top: auto;
+  background: rgba(255,255,255,0.15);
+  color: #fff;
+  border: 1px solid #fff;
+  font-size: 1rem;
+  padding: 0.5rem 1.2rem;
+  border-radius: 8px;
+  transition: background 0.2s, color 0.2s;
+}
+
+.ck-sidebar .ck-logout:hover {
+  background: #fff;
+  color: #fc5c7d;
+}
+
+/* Content area */
+.ck-content-area {
+  flex: 1;
+  padding: 2.5rem 2.5rem 2rem 2.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  min-width: 0;
+}
+
+.ck-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+.ck-header h1 {
+  font-size: 1.7rem;
+  color: #3a4a6b;
+  font-weight: 600;
+  margin: 0;
+}
+
+.ck-error {
+  background: #ffeaea;
+  color: #d32f2f;
+  border: 1px solid #f8bcbc;
+  border-radius: 6px;
+  padding: 0.7rem 1rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  font-size: 1rem;
+}
+
+.ck-loading {
+  text-align: center;
+  color: #6a82fb;
+  margin: 1rem 0;
+  font-weight: 500;
+}
+
+/* Login form */
+.ck-login-form {
+  max-width: 340px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  background: rgba(240,245,255,0.7);
+  border-radius: 14px;
+  padding: 2rem 2rem 1.5rem 2rem;
+  box-shadow: 0 2px 12px rgba(100,100,180,0.07);
+}
+
+.ck-login-form h2 {
+  color: #5a6b8c;
+  font-size: 1.2rem;
+  font-weight: 400;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.ck-input, .ck-textarea {
+  padding: 0.8rem 1rem;
+  border: 1px solid #d0d7e2;
+  border-radius: 8px;
+  font-size: 1rem;
+  background: #f7fafd;
+  transition: border 0.2s, box-shadow 0.2s;
+  outline: none;
+}
+
+.ck-input:focus, .ck-textarea:focus {
+  border: 1.5px solid #7b9acc;
+  box-shadow: 0 2px 8px rgba(106,130,251,0.08);
+}
+
+.ck-textarea {
+  min-height: 70px;
+  resize: vertical;
+}
+
+.ck-btn-row {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.ck-btn {
+  background: linear-gradient(90deg, #6a82fb 0%, #fc5c7d 100%);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.7rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s, box-shadow 0.2s, transform 0.1s;
+  box-shadow: 0 2px 8px rgba(100, 100, 180, 0.08);
+}
+
+.ck-btn:active {
+  transform: scale(0.97);
+}
+
+.ck-btn:disabled {
+  background: #d0d7e2;
+  color: #888;
+  cursor: not-allowed;
+}
+
+/* Entry form */
+.ck-entry-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  margin-bottom: 2.2rem;
+  background: rgba(240,245,255,0.7);
+  border-radius: 14px;
+  padding: 1.2rem 1.2rem 1rem 1.2rem;
+  box-shadow: 0 2px 12px rgba(100,100,180,0.07);
+}
+
+.ck-entry-form label {
+  font-size: 1rem;
+  color: #5a6b8c;
+  margin-bottom: 0.2rem;
+}
+
+.ck-entry-form .ck-btn {
+  align-self: flex-end;
+  margin-top: 0.5rem;
+}
+
+/* Entries list */
+.ck-entries-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+
+.ck-entries-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.ck-entries-header h2 {
+  margin: 0;
+  color: #3a4a6b;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.ck-entries-header .ck-btn {
+  font-size: 0.95rem;
+  padding: 0.3rem 1rem;
+  background: #e0eafc;
+  color: #6a82fb;
+  border: 1px solid #6a82fb;
+  box-shadow: none;
+  transition: background 0.2s, color 0.2s;
+}
+
+.ck-entries-header .ck-btn:hover {
+  background: #6a82fb;
+  color: #fff;
+}
+
+.ck-entries {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  overflow-y: auto;
+  max-height: 320px;
+}
+
+.ck-entry {
+  background: #f7fafd;
+  border-radius: 10px;
+  padding: 1.1rem 1rem 0.9rem 1rem;
+  margin-bottom: 1.1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  border-left: 5px solid #6a82fb;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  box-shadow: 0 1px 6px rgba(106,130,251,0.06);
+  position: relative;
+}
+
+.ck-entry.ck-locked {
+  border-left-color: #fc5c7d;
+  opacity: 0.7;
+}
+
+.ck-entry.ck-unlocked {
+  border-left-color: #6a82fb;
+}
+
+.ck-lock {
+  font-size: 1.3rem;
+  margin-right: 0.5rem;
+  position: absolute;
+  left: -2.2rem;
+  top: 1.1rem;
+}
+
+.ck-content {
+  font-size: 1.13rem;
+  color: #3a4a6b;
+  margin-bottom: 0.2rem;
+  word-break: break-word;
+}
+
+.ck-date {
+  font-size: 0.97rem;
+  color: #7b9acc;
+  margin-top: 0.2rem;
+}
+
+.ck-empty {
+  color: #aaa;
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 1.1rem;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .ck-main-card {
+    flex-direction: column;
+    min-width: 0;
+    max-width: 98vw;
+  }
+  .ck-sidebar {
+    flex-direction: row;
+    width: 100%;
+    min-width: 0;
+    padding: 1.2rem 1rem;
+    justify-content: space-between;
+    box-shadow: none;
+    border-radius: 24px 24px 0 0;
+  }
+  .ck-content-area {
+    padding: 1.5rem 1rem 1rem 1rem;
+  }
+  .ck-entry-form, .ck-login-form {
+    padding: 1rem 0.5rem;
+  }
+  .ck-entries {
+    max-height: 200px;
+  }
+  .ck-lock {
+    left: -1.5rem;
+    top: 1rem;
+  }
+}
